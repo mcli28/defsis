@@ -100,16 +100,16 @@ WSGI_APPLICATION = 'Login.wsgi.application'
 
 
 
-urlparse.uses_netloc.append("postgres")
-url = urlparse.urlparse(os.environ["DATABASE_URL"])
+# urlparse.uses_netloc.append("postgres")
+# url = urlparse.urlparse(os.environ["postgres://szdpcuqnhlvueb:7UydckszIiLBziPUO9gH5KRm0n@ec2-54-83-55-214.compute-1.amazonaws.com:5432/dacruv5drggni8"])
 
-conn = psycopg2.connect(
-	database=url.path[1:],
-	user=url.username,
-	password=url.password,
-	host=url.hostname,
-	port=url.port
-)
+# conn = psycopg2.connect(
+# 	database=url.path[1:],
+# 	user=url.username,
+# 	password=url.password,
+# 	host=url.hostname,
+# 	port=url.port
+# )
 
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
