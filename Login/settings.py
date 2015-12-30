@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
 import os
+import psycopg2
+import urlparse
+import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -78,21 +81,23 @@ WSGI_APPLICATION = 'Login.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-#    'default': {
-#            'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-#            'NAME': 'dog6iab2017cj',                      # Or path to database file if using sqlite3.
-#            # The following settings are not used with sqlite3:
-#            'USER': 'kqcyvhzygoqlso',
-#            'PASSWORD': 'HYK7385nx1-fFY2uRrwTYzcHlr',
-#            'HOST': 'postgres://kqcyvhzygoqlso:HYK7385nx1-fFY2uRrwTYzcHlr@ec2-54-204-8-224.compute-1.amazonaws.com:5432/dog6iab2017cj',                      # Empty for localhost through domain sockets or           '127.0.0.1' for localhost through TCP.
-#            'PORT': '5432',                      # Set to empty string for default.
-#        }
+	# 'default': {
+	# 	'ENGINE': 'django.db.backends.sqlite3',
+	# 	'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+	# }
+	'default': {
+		'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+		'NAME': 'dacruv5drggni8',                      # Or path to database file if using sqlite3.
+		# The following settings are not used with sqlite3:
+		'USER': 'szdpcuqnhlvueb',
+		'PASSWORD': '7UydckszIiLBziPUO9gH5KRm0n',
+		'HOST': 'ec2-54-83-55-214.compute-1.amazonaws.com', # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+		'PORT': '5432',                      # Set to empty string for default.
+	}
 }
+DATABASES['default'] =  dj_database_url.config()
 
 
 # Password validation
@@ -117,9 +122,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-ES'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/La_Paz'
 
 USE_I18N = True
 
@@ -131,4 +136,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
+STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+	os.path.join(BASE_DIR, 'static'),
+)
