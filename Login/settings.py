@@ -18,10 +18,8 @@ import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-# PROJECT_DIR = os.path.dirname(__file__)
 print BASE_DIR
-# PUBLIC_DIR = os.path.join(PROJECT_DIR, 'public')
-# print PUBLIC_DIR
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -81,13 +79,6 @@ STATICFILES_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
     os.path.join(BASE_DIR, 'static'),
 )
-# BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-# STATIC_ROOT = 'staticfiles'
-# STATIC_URL = '/static/'
-
-# STATICFILES_DIRS = (
-# 	os.path.join(BASE_DIR, 'static'),
-# )
 
 print STATICFILES_DIRS	
 TEMPLATES = [
@@ -129,7 +120,7 @@ DATABASES = {
 	# 	'PORT': '5432',                      # Set to empty string for default.
 	# }
 }
-#DATABASES['default'] =  dj_database_url.config()
+DATABASES['default'] =  dj_database_url.config()
 
 
 # Password validation
