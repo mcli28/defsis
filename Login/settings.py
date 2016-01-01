@@ -19,6 +19,7 @@ import dj_database_url
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 # BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+print BASE_DIR
 
 
 # Quick-start development settings - unsuitable for production
@@ -101,34 +102,24 @@ WSGI_APPLICATION = 'Login.wsgi.application'
 
 
 
-# urlparse.uses_netloc.append("postgres")
-# url = urlparse.urlparse(os.environ["postgres://szdpcuqnhlvueb:7UydckszIiLBziPUO9gH5KRm0n@ec2-54-83-55-214.compute-1.amazonaws.com:5432/dacruv5drggni8"])
-
-# conn = psycopg2.connect(
-# 	database=url.path[1:],
-# 	user=url.username,
-# 	password=url.password,
-# 	host=url.hostname,
-# 	port=url.port
-# )
 
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
 DATABASES = {
-	# 'default': {
-	# 	'ENGINE': 'django.db.backends.sqlite3',
-	# 	'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-	# }
 	'default': {
-		'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-		'NAME': 'dacruv5drggni8',                      # Or path to database file if using sqlite3.
-		# The following settings are not used with sqlite3:
-		'USER': 'szdpcuqnhlvueb',
-		'PASSWORD': '7UydckszIiLBziPUO9gH5KRm0n',
-		'HOST': 'ec2-54-83-55-214.compute-1.amazonaws.com', # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
-		'PORT': '5432',                      # Set to empty string for default.
+		'ENGINE': 'django.db.backends.sqlite3',
+		'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 	}
+	# 'default': {
+	# 	'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+	# 	'NAME': 'dacruv5drggni8',                      # Or path to database file if using sqlite3.
+	# 	# The following settings are not used with sqlite3:
+	# 	'USER': 'szdpcuqnhlvueb',
+	# 	'PASSWORD': '7UydckszIiLBziPUO9gH5KRm0n',
+	# 	'HOST': 'ec2-54-83-55-214.compute-1.amazonaws.com', # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+	# 	'PORT': '5432',                      # Set to empty string for default.
+	# }
 }
 DATABASES['default'] =  dj_database_url.config()
 
