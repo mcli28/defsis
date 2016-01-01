@@ -64,7 +64,7 @@ ROOT_URLCONF = 'Login.urls'
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 # BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = 'Login'
+STATIC_ROOT = ''
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
