@@ -17,10 +17,11 @@ import dj_database_url
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PROJECT_DIR = os.path.dirname(__file__)
-print PROJECT_DIR
-PUBLIC_DIR = os.path.join(PROJECT_DIR, 'public')
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# PROJECT_DIR = os.path.dirname(__file__)
+print BASE_DIR
+# PUBLIC_DIR = os.path.join(PROJECT_DIR, 'public')
+# print PUBLIC_DIR
 
 
 # Quick-start development settings - unsuitable for production
@@ -67,7 +68,7 @@ ROOT_URLCONF = 'Login.urls'
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
-STATIC_ROOT = os.path.join(PUBLIC_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
@@ -78,7 +79,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    os.path.join(PROJECT_DIR, 'static'),
+    os.path.join(BASE_DIR, 'static'),
 )
 # BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 # STATIC_ROOT = 'staticfiles'
@@ -116,7 +117,7 @@ WSGI_APPLICATION = 'Login.wsgi.application'
 DATABASES = {
 	'default': {
 		'ENGINE': 'django.db.backends.sqlite3',
-		'NAME': os.path.join(PROJECT_DIR, 'db.sqlite3'),
+		'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 	}
 	# 'default': {
 	# 	'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
