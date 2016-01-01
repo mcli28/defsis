@@ -64,7 +64,7 @@ ROOT_URLCONF = 'Login.urls'
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 # BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = 'staticfiles'
+STATIC_ROOT = 'login/staticfiles'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
@@ -82,7 +82,7 @@ TEMPLATES = [
 	{
 		'BACKEND': 'django.template.backends.django.DjangoTemplates',
 		'DIRS': ['templates'],
-		'APP_DIRS': True,
+		'APP_DIRS': False,
 		'OPTIONS': {
 			'context_processors': [
 				'django.template.context_processors.debug',
@@ -117,7 +117,7 @@ DATABASES = {
 	# 	'PORT': '5432',                      # Set to empty string for default.
 	# }
 }
-DATABASES['default'] =  dj_database_url.config()
+#DATABASES['default'] =  dj_database_url.config()
 
 
 # Password validation
