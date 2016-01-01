@@ -64,7 +64,7 @@ ROOT_URLCONF = 'Login.urls'
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 # BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = 'login/staticfiles'
+STATIC_ROOT = 'Login'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
@@ -82,7 +82,7 @@ TEMPLATES = [
 	{
 		'BACKEND': 'django.template.backends.django.DjangoTemplates',
 		'DIRS': ['templates'],
-		'APP_DIRS': False,
+		'APP_DIRS': True,
 		'OPTIONS': {
 			'context_processors': [
 				'django.template.context_processors.debug',
