@@ -17,6 +17,7 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from usuarios import views
+from django.conf.urls.static import static
 
 urlpatterns = [
  	url(r'^$', views.login_view, name = "home"),
