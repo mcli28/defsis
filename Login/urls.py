@@ -17,7 +17,7 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from usuarios import views
-from django.conf.urls.static import static
+# from django.conf.urls.static import static
 
 urlpatterns = [
  	url(r'^$', views.login_view, name = "home"),
@@ -26,4 +26,4 @@ urlpatterns = [
     url(r'^usuarios/', include('usuarios.urls')),
     url(r'^denuncias/', include('denuncias.urls'))
 ]
-static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+# static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
