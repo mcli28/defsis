@@ -25,3 +25,4 @@ urlpatterns = [
     url(r'^usuarios/', include('usuarios.urls')),
     url(r'^denuncias/', include('denuncias.urls'))
 ]
+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

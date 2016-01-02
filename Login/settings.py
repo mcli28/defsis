@@ -67,7 +67,7 @@ ROOT_URLCONF = 'Login.urls'
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
-STATIC_ROOT = 'staticfiles'
+STATIC_ROOT = 'static/'
 # STATIC_ROOT = os.path.join(os.getcwd(),'core/static')
 print STATIC_ROOT
 
