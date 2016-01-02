@@ -29,7 +29,7 @@ print BASE_DIR
 SECRET_KEY = '0u!s^akobl=$l+9ige6b%y*nc1mv&w89743p6h@-s35^o$mdul'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -66,7 +66,7 @@ ROOT_URLCONF = 'Login.urls'
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
-STATIC_ROOT = 'staticfiles'
+STATIC_ROOT = ''
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
