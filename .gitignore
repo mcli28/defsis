@@ -3,4 +3,4 @@
 *.bat
 *.mp3
 *.wav
-staticfiles/*
+# staticfiles/*
