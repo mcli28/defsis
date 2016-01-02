@@ -78,7 +78,7 @@ print STATIC_URL
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-	os.path.join(BASE_DIR, 'Login/static'),
+	os.path.join(BASE_DIR, 'static'),
 )
 
 print STATICFILES_DIRS	
