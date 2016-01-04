@@ -157,4 +157,3 @@ STATICFILES_DIRS = (
 )
 
 print STATICFILES_DIRS
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
